@@ -1,13 +1,18 @@
 'use strict'
-
+var currHeight = 100
+var currWidth = 100
 
 function onBallClick() {
-    var currHeight = 100
-    var currWidth = 100
-    var newHeight = currHeight + 50 + 'px'
-    var newWidth = currWidth + 50 + 'px'
     var elBall = document.querySelector('div')
-    elBall.style.height = newHeight
-    elBall.style.width = newWidth
-    elBall.innerText = newHeight + ',' + newWidth
+
+    currHeight += 50
+    currWidth += 50
+
+    elBall.style.height = currHeight + 'px'
+    elBall.style.width = currWidth + 'px'
+    elBall.innerText = currHeight
+    if (currHeight >= 400) {
+        currHeight = 100
+        currWidth = 100
+    }
 }
