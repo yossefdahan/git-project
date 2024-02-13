@@ -4,7 +4,7 @@ var currWidth = 100
 
 function onBallClick() {
     var elBall = document.querySelector('div')
-
+    console.log('hi');
     currHeight += 50
     currWidth += 50
 
